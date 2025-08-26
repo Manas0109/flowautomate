@@ -116,14 +116,4 @@ curl -X POST "http://localhost:8000/query" \
 - All sensitive information should be stored in the `.env` file
 - The `.env` file should never be committed to version control
 
-## Error Handling
 
-The API includes comprehensive error handling for:
-- Invalid file types
-- Processing errors
-- Authentication failures
-- Invalid queries
-
-## Contributing
-
-Feel free to submit issues, fork the repository, and create pull requests for any improvements.
