@@ -1,0 +1,5 @@
+/.env
+/.venv
+/.vscode
+/embedded-images-tables.pdf
+/__pycache__
