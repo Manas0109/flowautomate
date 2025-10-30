@@ -10,6 +10,7 @@ from pydantic import BaseModel
 import logging
 import jwt
 from passlib.context import CryptContext
+from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 load_dotenv()
 from final_pipeline import MultimodalRAG
@@ -84,6 +85,14 @@ app = FastAPI(
     title="Multimodal RAG API",
     description="API for multimodal document processing and question answering",
     version="1.0.0"
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # In production, replace with specific origins
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # Global variables
